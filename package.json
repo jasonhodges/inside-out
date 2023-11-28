@@ -2,9 +2,6 @@
   "name": "inside-out",
   "version": "0.0.0",
   "private": true,
-  "engines": {
-    "node": ">=18.13.0"
-  },
   "scripts": {
     "dev": "ng serve",
     "ng": "ng",
