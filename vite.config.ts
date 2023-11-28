@@ -6,7 +6,7 @@ import analog from '@analogjs/platform';
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
   return {
-    publicDir: 'src/public',
+    publicDir: 'src/assets',
     optimizeDeps: {
       include: ['@angular/common', '@angular/forms'],
     },
@@ -16,11 +16,8 @@ export default defineConfig(({ mode }) => {
     plugins: [
       analog({
         nitro: {
-          output: {
-            dir: '../../../.vercel/output', // <- Vercel output
-            publicDir: '../../../.vercel/output/static', // <- Vercel output
-          },
-        },
+          preset: 'vercel',
+        }
       }),
       splitVendorChunkPlugin(),
     ],
